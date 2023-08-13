@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="ticket.css">     
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+
+     <title>Buy Tickets</title>
+</head>
+<body>
+  <div class="nav-area">
+    <input type="checkbox" id="box">
+    <label for="box" class="btn-area"><i class="fa fa-bars"></i></label>
+    <label class="logo">Buy Tickets</label>
+    
+    <ul>
+  <li><a href="../Hikkaduwa.html">Home</a></li>
+  </ul>
+  
+  <p>Show your ticket via mobile device or print at home</p>
+  </div>
+
+  
+  <div class="breadcrumb">
+    <span class="breadcrumb-item active"><a href="index.html">Ticket</a></span>
+    <span class="breadcrumb-separator active">&lt;</span>
+    <span class="breadcrumb-item active">Details</span>
+    <span class="breadcrumb-separator">&lt;</span>
+    <span class="breadcrumb-item">Payment</span>
+    <span class="breadcrumb-separator">&lt;</span>
+    <span class="breadcrumb-item">Confirmation</span>
+  </div>
+ 
+  <div class="container">
+    <div class="column-left">
+      <div class="form-section">
+        <h2>Enter your details</h2>
+        <br>
+        <form action="/" method="post" class="my-form">
+        <div class="form-data">
+          <label class="label">Full Name</label>
+          <p class="desc">Same as your ID</p>
+          <input type="text" name="name" required>
+          <span class="error"></span>
+        </div>
+        <br>
+        <div class="form-data">
+          <label class="label">Gender</label>
+          <p class="desc">Select your gender</p>
+          <select id="gender">
+            <option value="" class="my-option" selected disabled>-- Select Gender --</option>
+            <option value="Male" class="my-option">Male</option>
+            <option value="Female" class="my-option">Female</option>
+            <option value="Not Prefer to Say" class="my-option">Not prefer to say</option>
+          </select>
+          <span class="error"></span>
+        </div>
+        <br>
+        <div class="form-data">
+          <label class="label" >Mobile Number</label>
+          <p class="desc">We may reach out for booking updates here over sms/whatsapp</p>
+          <input id="mobile_code" type="tel" name="phone" required>
+          <span class="error"></span>
+        </div>
+        <br>
+        <div class="form-data">
+          <label class="label">Email</label>
+          <p class="desc">We will send your ticket here</p>
+          <input type="email" name="email" required>
+          <span class="error"></span>
+        </div>
+        <br>
+        <div class="form-data">
+          <label class="label">Confirm Email</label>
+          <p class="desc">Just to ensure we've got this right</p>
+          <input type="email" name="confirm-email" required>
+          <span class="error"></span>
+        </div>        
+        </form>
+      </div>
+
+    </div>
+
+
+    <!--Right Side Table-->
+    <div class="column-right">
+      <div class="main-table">
+        <h2>Summary</h2>
+      <br>
+        <table class="table">
+          <tr>
+            <td>Date</td>
+            <td id="table-date"></td>
+          </tr>
+          <tr>
+            <td>Time</td>
+            <td id="table-time">07.00 am to 08.00 am</td>
+          </tr>
+          <tr>
+            <td>Duration</td>
+            <td id="table-duration">1 hrs (01 Normal : 00 Peak)</td>
+          </tr>
+          <tr>
+            <td><strong>Ticket</strong></td>
+            <td id="table-tickets"><strong>Charges</strong></td>
+          </tr>
+          <tr>
+            <td id="table-sl-adult-category">SL Adult</td>
+            <td id="table-sl-adult"></td>
+          </tr>
+          <tr>
+            <td id="table-sl-child-category">SL Child</td>
+            <td id="table-sl-child"></td>
+          </tr>
+          <tr>
+            <td id="table-foreigner-adult-category">Foreigner Adult</td>
+            <td id="table-foreigner-adult"></td>
+          </tr>
+          <tr>
+            <td id="table-foreigner-child-category">Foreigner Child</td>
+            <td id="table-foreigner-child"></td>
+          </tr>
+          <tr>
+            <td id="table-infant-category">Infant</td>
+            <td id="table-infant"></td>
+          </tr>
+          <tr>
+            <td><strong>Total Payable</strong></td>
+            <td id="table-total"><strong></strong></td>
+          </tr>
+        </table>
+      </div>
+        <br>
+        <br>
+       <div class = "continue-btn" > <a href="payment.html" >
+        <button id="continue-purchase" disabled>Continue Purchase</button></a></div>
+       <br>
+       
+    </div>
+  
+    
+  </div>
+  
+
+  <!-- Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"></script>
+
+<!-- Custom JS -->
+<script src="JS Files/detail.js"></script>
+
+
+
+</body>
+</html>

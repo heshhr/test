@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="ticket.css">     
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+
+     <title>Buy Tickets</title>
+</head>
+<body>
+  <div class="nav-area">
+    <input type="checkbox" id="box">
+    <label for="box" class="btn-area"><i class="fa fa-bars"></i></label>
+    <label class="logo">Buy Tickets</label>
+    
+    <ul>
+  <li><a href="../Hikkaduwa.html">Home</a></li>
+  </ul>
+  
+  <p>Show your ticket via mobile device or print at home</p>
+  </div>
+
+  
+  <div class="breadcrumb">
+    <span class="breadcrumb-item active"><a href="index.html">Ticket</a></span>
+    <span class="breadcrumb-separator active">&lt;</span>
+    <span class="breadcrumb-item active"><a href="detail.html">Details></a></span>
+    <span class="breadcrumb-separator active">&lt;</span>
+    <span class="breadcrumb-item active"><a href="payment.html">Payment</a></span>
+    <span class="breadcrumb-separator active">&lt;</span>
+    <span class="breadcrumb-item active">Confirmation</span>
+  </div>
+
+      
+    <div class="my-div">
+      <h2>Confirmation</h2>
+      <div class="thank"><label>Thank you for your order.</label> 
+        <label >Your order has been confirmed with us. You can show this confirmation at the entrance. Following is the summary of your order.</label>
+      </div>
+      <br>
+        <table class="table1">
+          <tr>
+            <td>Name</td>
+            <td id="table-username"></td>
+          </tr>
+          <tr>
+            <td>Date</td>
+            <td id="table-date"></td>
+          </tr>
+          <tr>
+            <td>Time</td>
+            <td id="table-time">07.00 am to 08.00 am</td>
+          </tr>
+          <tr>
+            <td>Duration</td>
+            <td id="table-duration">1 hrs (01 Normal : 00 Peak)</td>
+          </tr>
+          <tr>
+            <td>Mobile</td>
+            <td id="table-mobile"></td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td id="table-email">Email</td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td id="table-gender"></td>
+          </tr>
+
+          <tr>
+            <td><strong>Ticket</strong></td>
+            <td id="table-tickets"><strong>Charges</strong></td>
+          </tr>
+          <tr>
+            <td id="table-sl-adult-category">SL Adult</td>
+            <td id="table-sl-adult"></td>
+          </tr>
+          <tr>
+            <td id="table-sl-child-category">SL Child</td>
+            <td id="table-sl-child"></td>
+          </tr>
+          <tr>
+            <td id="table-foreigner-adult-category">Foreigner Adult</td>
+            <td id="table-foreigner-adult"></td>
+          </tr>
+          <tr>
+            <td id="table-foreigner-child-category">Foreigner Child</td>
+            <td id="table-foreigner-child"></td>
+          </tr>
+          <tr>
+            <td id="table-infant-category">Infant</td>
+            <td id="table-infant"></td>
+          </tr>
+          <tr>
+            <td><strong>Total Payable</strong></td>
+            <td id="table-total"><strong></strong></td>
+          </tr>
+        </table>
+        <br>
+        <br>
+       
+       <br>
+    </div>
+    
+     
+       
+ 
+  
+    
+
+  
+
+  <!-- Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"></script>
+
+<!-- Custom JS -->
+<script src="JS Files/confirm.js"></script>
+
+
+
+</body>
+</html>

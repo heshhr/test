@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="ticket.css">   
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+     <title>Buy Tickets</title>
+</head>
+<body>
+  <div class="nav-area">
+    <input type="checkbox" id="box">
+    <label for="box" class="btn-area"><i class="fa fa-bars"></i></label>
+    <label class="logo">Buy Tickets</label>
+    
+   <ul>
+  <li><a href="../Hikkaduwa.html">Home</a></li>
+  </ul>
+  
+  <p>Show your ticket via mobile device or print at home</p>
+  </div>
+
+  
+  <div class="breadcrumb">
+    <span class="breadcrumb-item active">Ticket</span>
+    <span class="breadcrumb-separator">&lt;</span>
+    <span class="breadcrumb-item">Details</span>
+    <span class="breadcrumb-separator">&lt;</span>
+    <span class="breadcrumb-item">Payment</span>
+    <span class="breadcrumb-separator">&lt;</span>
+    <span class="breadcrumb-item">Confirmation</span>
+  </div>
+
+
+  
+  <div class="container">
+    <div class="column-left">
+      <div class="date-picker">
+        <h2>Date</h2>
+        <br>
+        <label for="visit-date" class="date-lable">Select a date for your visit :</label>
+      
+        <input type="date" id="visit-date">
+        
+      </div>
+      <br>
+      <hr>
+      
+
+      <div class="guest-section">
+        <h2>Guest</h2>
+        <br>
+        <div class="guest-category">
+          <label for="sl-adult">SL Adult <span class="description">Above 15 yrs</span></label>
+          <button class="decrement" data-category="sl-adult">-</button>
+          <span id="count-sl-adult" class="count" >0</span>
+          <button class="increment" data-category="sl-adult">+</button>
+        </div>
+        <div class="guest-category">
+          <label for="sl-child">SL Child <span class="description">5 to 14 yrs</span></label>
+          <button class="decrement" data-category="sl-child">-</button>
+          <span id="count-sl-child" class="count" >0</span>
+          <button class="increment" data-category="sl-child">+</button>
+        </div>
+        <div class="guest-category">
+          <label for="foreigner-adult">Foreigner Adult <span class="description">Above 15 yrs</span></label>
+          <button class="decrement" data-category="foreigner-adult">-</button>
+          <span id="count-foreigner-adult" class="count" >0</span>
+          <button class="increment" data-category="foreigner-adult">+</button>
+        </div>
+        <div class="guest-category">
+          <label for="foreigner-child">Foreigner Child <span class="description">5 to 14 yrs</span></label>
+          <button class="decrement" data-category="foreigner-child">-</button>
+          <span id="count-foreigner-child" class="count" >0</span>
+          <button class="increment" data-category="foreigner-child">+</button>
+        </div>
+        <div class="guest-category">
+          <label for="infant">Infant <span class="description">Under 4 yrs</span></label>
+          <button class="decrement" data-category="infant">-</button>
+          <span id="count-infant" class="count">0</span>
+          <button class="increment" data-category="infant">+</button>
+        </div>
+      </div>
+      
+      <hr>
+      <br>
+      <div class="duration-section">
+        <h2>Duration</h2><br>
+        <label for="start-time">Start Time:</label>
+        <select id="start-time">
+          <option value="07:00 am">07:00 am</option>
+          <option value="08:00 am">08:00 am</option>
+          <option value="09:00 am">09:00 am</option>
+          <option value="10:00 am">10:00 am</option>
+          <option value="11:00 am">11:00 am</option>
+          <option value="12:00 pm">12:00 pm</option>
+          <option value="01:00 pm">01:00 pm</option>
+          <option value="02:00 pm">02:00 pm</option>
+          <option value="03:00 pm">03:00 pm</option>
+          <option value="04:00 pm">04:00 pm</option>
+          <option value="05:00 pm">05:00 pm</option>
+        </select>
+      
+        <label for="end-time">End Time:</label>
+        <select id="end-time">
+          <option value="08:00 am">08:00 am</option>
+          <option value="09:00 am">09:00 am</option>
+          <option value="10:00 am">10:00 am</option>
+          <option value="11:00 am">11:00 am</option>
+          <option value="12:00 pm">12:00 pm</option>
+          <option value="01:00 pm">01:00 pm</option>
+          <option value="02:00 pm">02:00 pm</option>
+          <option value="03:00 pm">03:00 pm</option>
+          <option value="04:00 pm">04:00 pm</option>
+          <option value="05:00 pm">05:00 pm</option>
+          <option value="06:00 pm">06:00 pm</option>
+        </select>
+        
+      </div>
+    </div>
+
+
+    <!--Right Side Table-->
+    <div class="column-right">
+      <div class="main-table">
+        <h2>Summary</h2>
+      <br>
+        <table class="table">
+          <tr>
+            <td>Date</td>
+            <td id="table-date"></td>
+          </tr>
+          <tr>
+            <td>Time</td>
+            <td id="table-time">07.00 am to 08.00 am</td>
+          </tr>
+          <tr>
+            <td>Duration</td>
+            <td id="table-duration">1 hrs (01 Normal : 00 Peak)</td>
+          </tr>
+          <tr>
+            <td><strong>Ticket</strong></td>
+            <td id="table-tickets"><strong>Charges</strong></td>
+          </tr>
+          <tr>
+            <td id="table-sl-adult-category">SL Adult</td>
+            <td id="table-sl-adult"></td>
+          </tr>
+          <tr>
+            <td id="table-sl-child-category">SL Child</td>
+            <td id="table-sl-child"></td>
+          </tr>
+          <tr>
+            <td id="table-foreigner-adult-category">Foreigner Adult</td>
+            <td id="table-foreigner-adult"></td>
+          </tr>
+          <tr>
+            <td id="table-foreigner-child-category">Foreigner Child</td>
+            <td id="table-foreigner-child"></td>
+          </tr>
+          <tr>
+            <td id="table-infant-category">Infant</td>
+            <td id="table-infant"></td>
+          </tr>
+          <tr>
+            <td><strong>Total Payable</strong></td>
+            <td id="table-total"><strong></strong></td>
+          </tr>
+        </table>
+      </div>
+        
+        <br>
+       <div class = "continue-btn" >
+        <a href="detail.html" >
+        <button id="continue-purchase" disabled>Continue Purchase</button></a>
+      </div>
+       <br> 
+      <hr>
+
+       <div id="peak-hours-info">
+        <h3>Peak Hours Information</h3><br>
+        <p>Every day from 10.00 am to 1.00 pm and from 3.00 pm to 6.00 pm will be considered as Peak hours. Charges during these hours are higher as indicated in the table below.</p>
+    
+      </div> 
+      <br>
+      <table id="charges-table" class="charges-table">
+        <thead>
+          <tr>
+            <th class="charges-header">Category</th>
+            <th class="charges-header">Normal Hour Charge</th>
+            <th class="charges-header">Peak Hour Charge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="foreigner-adult" class="charges-row">
+            <td class="charges-cell">Foreigner Adult</td>
+            <td class="charges-cell">$10</td>
+            <td class="charges-cell">$13</td>
+          </tr>
+          <tr id="foreigner-child" class="charges-row">
+            <td class="charges-cell">Foreigner Child</td>
+            <td class="charges-cell">$5</td>
+            <td class="charges-cell">$8</td>
+          </tr>
+          <tr id="sl-adult" class="charges-row">
+            <td class="charges-cell">SL Adult</td>
+            <td class="charges-cell">$4</td>
+            <td class="charges-cell">$6</td>
+          </tr>
+          <tr id="sl-child" class="charges-row">
+            <td class="charges-cell">SL Child</td>
+            <td class="charges-cell">$2</td>
+            <td class="charges-cell">$3</td>
+          </tr>
+          <tr class="charges-row">
+            <td class="charges-cell">Infant</td>
+            <td class="charges-cell">Free</td>
+            <td class="charges-cell">Free</td>
+          </tr>
+        </tbody>
+      </table>
+      
+       
+    </div>
+  
+    
+  </div>
+  
+
+  <!-- Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<!-- Custom JS -->
+<script src="JS Files/ticket.js"></script>
+
+
+</body>
+</html>
